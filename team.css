@@ -1,0 +1,47 @@
+/* Team photos */
+.team-grid{grid-template-columns:repeat(auto-fill,minmax(210px,1fr))!important}
+.team-card{padding:0!important;overflow:hidden;gap:6px!important}
+.team-photo{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 22%;display:block;background:var(--surface-3);filter:saturate(.92)}
+.team-initials{display:grid;place-items:center;font:800 clamp(2.6rem,6vw,3.6rem)/1 'Manrope',sans-serif;letter-spacing:.04em;color:#a6cf92;background:radial-gradient(circle at 30% 20%,#2a3345,#161b24)}
+.team-role{padding:14px 18px 0}
+.team-card strong{padding:0 18px 18px}
+
+/* Compact, professional team portraits */
+.team-grid{grid-template-columns:repeat(auto-fill,minmax(190px,1fr))!important;gap:18px!important}
+.team-card{padding:26px 16px 22px!important;align-items:center;text-align:center;gap:4px!important}
+.team-photo{width:116px!important;height:116px!important;aspect-ratio:1/1!important;border-radius:50%!important;object-fit:cover;object-position:center 20%;border:2px solid rgba(255,255,255,.12);box-shadow:0 0 0 5px rgba(166,207,146,.10),0 10px 24px rgba(0,0,0,.4);margin-bottom:14px;filter:none}
+.team-initials{font-size:2rem!important;margin-bottom:14px}
+.team-role{padding:0!important;font-size:.68rem}
+.team-card strong{padding:0!important;font-size:.98rem}
+.team-card:hover .team-photo{border-color:rgba(166,207,146,.55)}
+/* Founder block */
+.story-article:has(.story-image-static[alt="Nombulelo Portia Ngcwabe"]){grid-template-columns:200px 1fr!important;gap:32px!important;align-items:center;margin-top:28px;padding:24px;background:linear-gradient(180deg,var(--surface-2),var(--surface));border:1px solid var(--line);border-radius:16px;max-width:760px}
+.story-image-static[alt="Nombulelo Portia Ngcwabe"]{width:200px!important;height:200px!important;max-width:100%;aspect-ratio:1/1!important;border-radius:50%!important;object-fit:cover;object-position:center 20%}
+.story-article:has(.story-image-static[alt="Nombulelo Portia Ngcwabe"]) h2{font-size:clamp(1.5rem,2.6vw,2rem)}
+@media(max-width:620px){.story-article:has(.story-image-static[alt="Nombulelo Portia Ngcwabe"]){grid-template-columns:1fr!important;text-align:center;justify-items:center}.team-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important}.team-photo{width:92px!important;height:92px!important}}
+
+/* Team — compact, futuristic profile cards */
+.team-grid{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))!important;gap:14px!important;margin-top:36px!important}
+.team-card{position:relative;align-items:center;text-align:center;padding:24px 16px 20px!important;gap:4px!important;border-radius:20px!important;
+  background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.02) 55%),#12161e!important;
+  border:1px solid rgba(255,255,255,.09)!important;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);overflow:hidden}
+.team-card::before{content:"";position:absolute;inset:0 0 auto 0;height:80px;background:radial-gradient(120px 70px at 50% 0,rgba(143,184,216,.22),transparent 70%);pointer-events:none}
+.team-card:hover{border-color:rgba(166,207,146,.45)!important;transform:translateY(-3px);box-shadow:0 18px 40px rgba(0,0,0,.5),0 0 0 1px rgba(166,207,146,.12)!important}
+.team-photo{width:92px!important;height:92px!important;aspect-ratio:1/1!important;border-radius:50%!important;object-fit:cover;object-position:center 20%;
+  padding:3px;background:conic-gradient(from 210deg,#8fb8d8,#a6cf92,#8fb8d8)!important;border:0;filter:saturate(.95);position:relative;z-index:1;margin-bottom:10px;box-shadow:0 8px 22px rgba(0,0,0,.45)}
+img.team-photo{background-clip:padding-box}
+.team-initials{display:grid;place-items:center;font:800 1.5rem/1 'Manrope',sans-serif!important;letter-spacing:.06em;color:#0d1410!important;background:conic-gradient(from 210deg,#8fb8d8,#a6cf92,#8fb8d8)!important}
+.team-role{padding:0!important;font-size:.64rem!important;letter-spacing:.16em!important;color:#8fb8d8!important;position:relative;z-index:1}
+.team-card strong{padding:0!important;font-size:.98rem!important;line-height:1.35;position:relative;z-index:1}
+
+/* Founder block on the team page */
+.wrap>h1+p+.story-article{grid-template-columns:minmax(0,220px) 1fr!important;gap:clamp(24px,4vw,48px)!important;align-items:center;margin-top:36px;padding:28px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.01));position:relative}
+.wrap>h1+p+.story-article .story-image-static{width:100%;max-width:220px;aspect-ratio:4/5;object-fit:cover;object-position:center 20%;border-radius:18px;box-shadow:0 0 0 1px rgba(166,207,146,.35),0 18px 40px rgba(0,0,0,.5)}
+.wrap>h1+p+.story-article h2{font-size:clamp(1.5rem,2.6vw,2.1rem)!important;margin:0 0 6px}
+.wrap>h1+p+.story-article h3{font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:#a6cf92!important;margin:0 0 12px}
+@media(max-width:640px){.wrap>h1+p+.story-article{grid-template-columns:1fr!important;text-align:center;justify-items:center}.team-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.team-card{padding:20px 10px 16px!important}.team-photo{width:80px!important;height:80px!important}}
+.team-photo{object-position:center 6%!important}
+.wrap>h1+p+.story-article{max-width:none!important;width:100%}
+.wrap>h1+p+.story-article .story-image-static{border-radius:18px!important;width:220px!important;height:auto!important;aspect-ratio:4/5!important}
+.wrap>h1+p+.story-article{column-gap:clamp(28px,4vw,52px)!important;display:grid!important}
+.wrap>h1+p+.story-article>div{padding-left:clamp(16px,3vw,40px)}
