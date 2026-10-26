@@ -79,4 +79,41 @@ html.glass .cl-social:hover{background:#fff!important;color:#0b63c8!important}
 html.glass .cl-powered img{filter:invert(1);background:transparent!important;padding:0}
 html.glass .cl-whatsapp-float{box-shadow:0 12px 30px rgba(20,120,80,.35)!important}
 @media(max-width:1000px){html.glass .static-nav{background:rgba(255,255,255,.82)!important;-webkit-backdrop-filter:blur(26px);backdrop-filter:blur(26px);border-bottom:1px solid #fff!important;box-shadow:0 24px 40px rgba(70,100,170,.25)!important}html.glass .static-nav a:hover{background:rgba(255,255,255,.9)!important}}
+
+/* ===== Cinematic liquid glass (water-like, refractive) ===== */
+html.glass{background:#d9e6ff!important}
+html.glass body{background:transparent!important;background-image:none!important}
+html.glass::before{content:"";position:fixed;inset:-25%;z-index:-1;pointer-events:none;filter:saturate(1.2) blur(10px);
+ background:radial-gradient(38% 34% at 18% 22%,#2f7bff 0,transparent 70%),radial-gradient(34% 32% at 82% 16%,#a46bff 0,transparent 70%),radial-gradient(40% 36% at 70% 78%,#19e6c1 0,transparent 70%),radial-gradient(30% 30% at 14% 84%,#ff7fb0 0,transparent 70%),radial-gradient(26% 26% at 48% 48%,#ffe08a 0,transparent 62%);
+ opacity:.85;animation:lg-drift 26s ease-in-out infinite alternate}
+@keyframes lg-drift{0%{transform:translate3d(-3%,-2%,0) rotate(0) scale(1)}50%{transform:translate3d(4%,3%,0) rotate(8deg) scale(1.08)}100%{transform:translate3d(-2%,5%,0) rotate(-6deg) scale(1.03)}}
+
+/* thick refractive glass: specular rim, inner glow, caustic highlight */
+html.glass .programme-card,html.glass .featured-partner,html.glass .impact-stat,html.glass .stat,html.glass .simple-grid>*,html.glass .card,html.glass .ev,html.glass .rev,html.glass .reg,html.glass .story-preview,html.glass .cl-video-card,html.glass .cl-contact-form,html.glass .notice,html.glass .partnership-tile,html.glass .team-card,html.glass .annual-card,html.glass .empty,html.glass .wrap>h1+p+.story-article{
+ background:radial-gradient(120% 70% at 0% 0%,rgba(255,255,255,.75),rgba(255,255,255,0) 48%),radial-gradient(90% 60% at 100% 100%,rgba(255,255,255,.5),rgba(255,255,255,0) 55%),linear-gradient(135deg,rgba(255,255,255,.34),rgba(255,255,255,.1))!important;
+ -webkit-backdrop-filter:blur(20px) saturate(230%) brightness(1.1);backdrop-filter:blur(20px) saturate(230%) brightness(1.1);
+ border:1px solid rgba(255,255,255,.65)!important;border-radius:26px!important;
+ box-shadow:inset 0 2px 1px rgba(255,255,255,.95),inset 0 -2px 2px rgba(255,255,255,.45),inset 2px 0 1px rgba(255,255,255,.55),inset -2px 0 1px rgba(255,255,255,.3),inset 0 0 28px rgba(255,255,255,.35),0 22px 54px rgba(35,65,170,.3),0 3px 8px rgba(35,65,170,.18)!important;
+ transition:transform .5s cubic-bezier(.34,1.56,.64,1),box-shadow .4s}
+html.glass .programme-card:hover,html.glass .featured-partner:hover,html.glass .card:hover,html.glass .ev:hover,html.glass .cl-video-card:hover,html.glass .team-card:hover,html.glass .annual-card:hover{transform:translateY(-6px) scale(1.018);box-shadow:inset 0 2px 1px #fff,inset 0 -2px 2px rgba(255,255,255,.55),inset 0 0 36px rgba(255,255,255,.5),0 34px 70px rgba(35,65,170,.38),0 4px 10px rgba(35,65,170,.2)!important}
+html.glass .programme-card img{border-radius:22px 22px 0 0}
+
+/* header: floating glass lens */
+html.glass .simple-header,html.glass header{background:radial-gradient(60% 140% at 10% 0,rgba(255,255,255,.7),rgba(255,255,255,.12) 60%),rgba(255,255,255,.22)!important;-webkit-backdrop-filter:blur(18px) saturate(230%) brightness(1.1);backdrop-filter:blur(18px) saturate(230%) brightness(1.1);box-shadow:inset 0 2px 1px rgba(255,255,255,.95),inset 0 -2px 2px rgba(255,255,255,.4),0 14px 40px rgba(35,65,170,.25)!important;border-bottom:1px solid rgba(255,255,255,.6)!important}
+html.glass .cl-footer,html.glass footer{background:radial-gradient(70% 120% at 0 0,rgba(255,255,255,.7),rgba(255,255,255,.1) 60%),rgba(255,255,255,.22)!important;-webkit-backdrop-filter:blur(20px) saturate(230%) brightness(1.1);backdrop-filter:blur(20px) saturate(230%) brightness(1.1);box-shadow:inset 0 2px 1px rgba(255,255,255,.95),0 -14px 40px rgba(35,65,170,.2)}
+
+/* Invert button: water droplet lens (refracts on Chromium) */
+html.glass .cl-invert,.cl-invert{background:radial-gradient(90% 120% at 20% 0,rgba(255,255,255,.75),rgba(255,255,255,.1) 60%),rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.7);box-shadow:inset 0 2px 1px rgba(255,255,255,.95),inset 0 -2px 3px rgba(255,255,255,.4),inset 0 0 14px rgba(255,255,255,.5),0 14px 32px rgba(35,65,170,.4);-webkit-backdrop-filter:blur(8px) saturate(220%) brightness(1.12);backdrop-filter:blur(8px) saturate(220%) brightness(1.12);transition:transform .45s cubic-bezier(.34,1.56,.64,1)}
+html.glass .cl-invert{-webkit-backdrop-filter:url(#lg-lens) blur(6px) saturate(220%);backdrop-filter:url(#lg-lens) blur(6px) saturate(220%)}
+html.glass .cl-invert:hover{transform:scale(1.08)}html.glass .cl-invert:active,.cl-invert:active{transform:scale(.94)}
+
+/* glossy glass buttons & chips */
+html.glass .cl-hero-primary,html.glass .btn-static,html.glass .btn-primary{background:radial-gradient(100% 140% at 20% 0,#fff,rgba(255,255,255,.55))!important;box-shadow:inset 0 2px 1px #fff,inset 0 -2px 3px rgba(120,150,230,.35),0 14px 30px rgba(35,65,170,.4)!important}
+html.glass .cl-contact-form button{background:radial-gradient(100% 160% at 25% 0,rgba(255,255,255,.55),transparent 55%),linear-gradient(135deg,#2f7bff,#8a6bff)!important;box-shadow:inset 0 2px 1px rgba(255,255,255,.8),inset 0 -2px 3px rgba(20,40,160,.35),0 14px 30px rgba(47,123,255,.5)!important}
+html.glass .cl-hero-secondary,html.glass .cl-hero-eyebrow,html.glass .cl-hero-arrow{-webkit-backdrop-filter:blur(14px) saturate(220%);backdrop-filter:blur(14px) saturate(220%);box-shadow:inset 0 1.5px 1px rgba(255,255,255,.8),0 8px 22px rgba(20,40,120,.3)}
+html.glass .cl-social,html.glass .slider-controls button,html.glass .menu-toggle{box-shadow:inset 0 2px 1px #fff,0 8px 20px rgba(35,65,170,.25);-webkit-backdrop-filter:blur(10px) saturate(220%);backdrop-filter:blur(10px) saturate(220%)}
+html.glass input,html.glass select,html.glass textarea{border-radius:14px!important;background:rgba(255,255,255,.55)!important;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+@media(prefers-reduced-motion:reduce){html.glass::before{animation:none}}
+@media(max-width:700px){html.glass .programme-card,html.glass .team-card,html.glass .cl-contact-form,html.glass .impact-stat{border-radius:22px!important}}
+a:hover{background:rgba(255,255,255,.9)!important}}
   
